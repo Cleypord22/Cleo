@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For My Love</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: 'Georgia', serif;
+            background: linear-gradient(to bottom right, #ffccd5, #ff9aa2);
+            color: #333;
+        }
+        .card {
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            max-width: 500px;
+            text-align: center;
+            color: #6a1b9a;
+            border: 2px solid #e63946; /* Border around the card */
+        }
+        .heart {
+            color: #e63946;
+            font-size: 4em;
+            animation: heartbeat 1.5s infinite;
+            cursor: pointer; /* Change cursor to pointer */
+        }
+        .message {
+            font-size: 1.2em;
+            margin-top: 20px;
+            line-height: 1.6;
+            background-color: #ffe0e6; /* Light background for the message */
+            padding: 20px;
+            border-radius: 10px; /* Rounded corners for the message box */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow for the message box */
+        }
+        .signature {
+            margin-top: 20px;
+            font-style: italic;
+            color: #8e44ad;
+        }
+        @keyframes heartbeat {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.2); }
+        }
+        h2 {
+            color: #6a1b9a;
+            margin-bottom: 20px; /* Space below the heading */
+        }
+        .audio-player {
+            margin-top: 20px;
+            text-align: center; /* Center the audio player */
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <div class="heart" id="heart">❤️</div>
+        <h2>For My Love</h2>
+        <p class="message">
+            My Dearest Crystal,<br>
+            I’m writing to say how truly sorry I am. I know I hurt you, and I regret every moment of it. Looking back, I see how my actions fell short of the love and respect you deserve. I was careless, and I let you down, but please know that you mean everything to me.<br>
+            I understand if it’s hard to forgive me right now. I’m giving you all the time and space you need, and I promise to do everything I can to rebuild your trust. You’ve always been my light, and I’m committed to becoming the partner you deserve. I’m here whenever you’re ready to talk, ready to listen, and ready to make things right.<br>
+            Please believe how deeply sorry I am, and how much I love you. I miss you, and I hope to earn back a place by your side.
+        </p>
+        <p class="signature">With all my heart,<br>Ced</p>
+        
+        <div class="audio-player">
+            <audio id="audio" loop>
+                <source src="on.bended.knee.mp3" type="audio/mp3">
+                Your browser does not support the audio element.
+            </audio>
+        </div>
+    </div>
+
+    <script>
+        // Get the heart and audio elements
+        const heart = document.getElementById('heart');
+        const audio = document.getElementById('audio');
+
+        // Add click event to the heart
+        heart.addEventListener('click', () => {
+            // Play the audio when the heart is clicked
+            audio.play();
+        });
+    </script>
+</body>
+</html>
